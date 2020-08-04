@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### This project helps basically in getting the answer for the follwing two questions:
+### This project helps basically in getting the answer for the following two questions:
 
 1.	Which 10 countries in the data have the highest population growth rates from 2010 to 2018?
 2.	Of those 10 countries, when combined with GDP/PPP, which would be the best 3 countries to start investing marketing into for our products?
@@ -11,7 +11,7 @@
 
 The project contains two main parts to achieve their objectives:
 
-- **Data Ingestion Service**: Allows the user to request the updated dataset via API REST and this is programmatically persisted in an embedded database.
+- **Data Ingestion Service**: Allows the user to perform the data ingestion, by requesting the data via API REST and programmatically persisting the results in an embedded database.
 
 - **Data Querying Service**
 Allows the user to answer the aforementioned question by internally performing SQL queries that in turn manipulate the previously loaded data.
@@ -25,7 +25,6 @@ Allows the user to answer the aforementioned question by internally performing S
 |*n?x or Windows OS | Any of your preference, but one that supports the installation and usage of the other components|mandatory|
 |Java|8 or higher|mandatory|
 |Git|2.22 or higher ( older versions may also work)| optional|
-|
 
 ### Compilation
 
@@ -38,7 +37,7 @@ To achieve this, open a terminal and issue the following command:
 sh compile.sh
 ```
 
-On command completion, we should get a packaged `jar` file at `target/`, located at the root of the project and which contains all what we need to run our project.
+On command completion, we should get a packaged `jar` file inside the `target/` folder, created at the root of the project and which contains all what we need to run our project.
 
 ### Execution
 
@@ -46,7 +45,7 @@ The project provides a `run.sh` shell script. You can locate it at the root of t
 
 Such script permits specifying two different operations that, if properly executed, will get the job done.
 
-So, lets have a little of fun by executing our application by following these instructions:
+So, let's have a little of fun by executing our application. Follow the instructions below:
 
 #### 1. Loading the data
 
