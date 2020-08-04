@@ -5,7 +5,7 @@ lazy val projectSettings = Seq(
   scalaVersion := "2.13.1"
 )
 
-lazy val globalMarketingWorldbankReport = ( project in file( "global-marketing-worldbank-report" ) )
+lazy val globalMarketingWorldbankReport = ( project in file( "." ) )
     .settings( projectSettings: _* )
     .settings(
       mainClass in assembly := Some( "controllers.Application" )
