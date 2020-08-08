@@ -78,10 +78,37 @@ So, let's have fun and perform the execution of our application. For this, follo
 
  1. Execute the same `run.sh` script but this time using the `--results` flag:
     ```bash
-    sh bin/run.sh --dataload
+    sh bin/run.sh --results
     ```
 
  1. Wait for the results to show up.
+
+#### Stopping the Application's execution
+
+ 1. You can use the `run.sh` script to stop the running instance of our Application by using the `--kill-app` flag:
+    ```bash
+    sh bin/run.sh --results
+    ```
+
+ 1. This automatically will look for the Application Process Identificator and kill their execution.
+
+#### Cleaning Up the Workspace
+During the execution some files and folders are generated, such as:
+* SBT local installation files.
+* Log files.
+* Library folders.
+
+To perform a cleanup, you can use the `cleanup.sh` script in two ways:
+
+ 1. To clean all but log files use:
+    ```bash
+    sh bin/cleanup.sh
+    ```
+
+ 1. Otherwise, to perform a full-cleanup which includes deleting all the generated logfiles, use:
+    ```bash
+    sh bin/cleanup.sh --also-logs
+    ```
 
 # Questions?
 
