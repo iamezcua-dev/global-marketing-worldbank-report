@@ -1,3 +1,6 @@
 .idea/
 target/
-project/
+sbt/
+logs/
+sbt.zip
+.DS_Store
