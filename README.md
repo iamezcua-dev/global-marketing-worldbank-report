@@ -87,7 +87,7 @@ So, let's have fun and perform the execution of our application. For this, follo
 
  1. You can use the `run.sh` script to stop the running instance of our Application by using the `--kill-app` flag:
     ```bash
-    sh bin/run.sh --results
+    sh bin/run.sh --kill-app
     ```
 
  1. This automatically will look for the Application Process Identificator and kill their execution.
