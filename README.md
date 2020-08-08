@@ -78,7 +78,7 @@ So, let's have fun and perform the execution of our application. For this, follo
 
  1. Execute the same `run.sh` script but this time using the `--results` flag:
     ```bash
-    sh bin/run.sh --dataload
+    sh bin/run.sh --results
     ```
 
  1. Wait for the results to show up.
