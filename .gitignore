@@ -6,3 +6,4 @@ sbt.zip
 .DS_Store
 lib/
 .java-version
+src/main/scala/playground/
