@@ -4,3 +4,5 @@ sbt/
 logs/
 sbt.zip
 .DS_Store
+lib/
+.java-version
