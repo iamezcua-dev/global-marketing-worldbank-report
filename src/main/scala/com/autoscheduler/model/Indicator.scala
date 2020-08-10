@@ -5,6 +5,7 @@ import javax.persistence.Embeddable
 
 import scala.beans.BeanProperty
 
+
 @Embeddable
 case class Indicator( @BeanProperty
                       @JsonProperty( value = "id" )
