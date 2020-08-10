@@ -25,7 +25,7 @@ class WorldPopulationGrowthService @Autowired()( countryStatisticsRepository: Co
     } )
   }
   
-  def getSampleData: String = "Sample"
+  def getSampleData: String = "Job done!"
   
   def getInformation = {
     val information = countryStatisticsRepository.findAll()

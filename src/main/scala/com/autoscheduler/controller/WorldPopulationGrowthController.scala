@@ -20,7 +20,7 @@ class WorldPopulationGrowthController( ) extends LazyLogging {
   }
   
   @RequestMapping( value = Array( "/indicators" ), method = Array( RequestMethod.GET ) )
-  def getAndStoreWorldsPopulationGrowth( ): Unit = {
+  def getAndStoreWorldsPopulationGrowth( ): String = {
     Locale.getISOCountries( IsoCountryCode.PART1_ALPHA3 )
         .toArray.map( _.toString )
         .map( country => {
@@ -30,6 +30,7 @@ class WorldPopulationGrowthController( ) extends LazyLogging {
         } )
         .foreach( countryStatistics =>
           service.saveStatisticsToDatabase( countryStatistics ) )
+    "Job done!"
   }
   
   @RequestMapping( value = Array( "/sample" ), method = Array( RequestMethod.GET ) )
