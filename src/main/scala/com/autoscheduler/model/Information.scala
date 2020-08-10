@@ -5,6 +5,7 @@ import javax.persistence._
 
 import scala.beans.BeanProperty
 
+
 @Entity
 class Information( ) {
   @Id
