@@ -38,7 +38,15 @@ function showHelp() {
 }
 
 function performAnalytics() {
-  echo "[$(date)] Not yet implemented :("
+	echo "[$(date)] 1st Question: Which 10 countries in the data have the highest population growth rates from 2010 to 2018?"
+  echo ""
+	echo "Answer: "
+	java -classpath "answer-questions/target/scala-2.13/answer-questions-assembly-0.1.jar" com.autoscheduler.Application
+
+	echo ""
+	echo "[$(date)] 2nd Question: ? "
+	echo "Answer: "
+	#java -classpath "answer-questions/target/scala-*/answer-questions-assembly-0.1.jar" com.autoscheduler.Application
 }
 
 function performDataIngestion() {
