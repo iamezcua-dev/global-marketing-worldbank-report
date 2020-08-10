@@ -20,10 +20,10 @@ function startApplication() {
   PID="$(ps aux | grep -e "java.*target.*autoscheduler.*App" | grep -v "grep" | tr -s ' ' | cut -d' ' -f2)"
   if [ -z "$PID" ]; then
     echo "[$(date)] Starting application ..."
-    nohup java -cp "lib/*:target/scala-*/*.jar" com.autoscheduler.Application \
+    nohup java -classpath "target/scala-2.13/classes:lib/*" com.autoscheduler.Application -Dspring.profiles.active=sqlite \
       1>"$LOG_DIR/application-$(date +'%Y%m%d_%H%M%S').out" \
       2>"$LOG_DIR/application-$(date +'%Y%m%d_%H%M%S').err" &
-    sleep 10
+    sleep 15
   else
     echo "[$(date)] Your application is apparently already running."
   fi

@@ -18,7 +18,7 @@ LOG_DIR="logs/"
 
 safelyWipeableFiles() {
   echo "[$(date)] Deleting generated target folder and both, local SBT installation and their zip source package  ..."
-  rm -rf sbt.zip target/ sbt/
+  rm -rf sbt.zip target/ sbt/ *.db
 }
 
 showHelp() {

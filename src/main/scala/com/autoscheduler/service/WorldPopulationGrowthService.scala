@@ -1,6 +1,7 @@
 package com.autoscheduler.service
 
 import com.autoscheduler.model.Information
+import com.autoscheduler.persistence.CountryStatisticsRepository
 import com.autoscheduler.property.PropertyBundle
 import com.fasterxml.jackson.core.JsonParseException
 import com.fasterxml.jackson.databind.{ DeserializationFeature, ObjectMapper }
@@ -12,9 +13,24 @@ import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 
 @Service
-class WorldPopulationGrowthService @Autowired()( properties: PropertyBundle ) extends LazyLogging {
+class WorldPopulationGrowthService @Autowired()( countryStatisticsRepository: CountryStatisticsRepository ) extends LazyLogging {
+  
+  @Autowired()
+  var properties: PropertyBundle = _
+  
+  def saveStatisticsToDatabase( countryStatistics: List[ Information ] ): Unit = {
+    countryStatistics.foreach( countryStatistic => {
+      logger.info( s"Storing in database: $countryStatistic" )
+      countryStatisticsRepository.save( countryStatistic )
+    } )
+  }
   
   def getSampleData: String = "Sample"
+  
+  def getInformation = {
+    val information = countryStatisticsRepository.findAll()
+    information.forEach( println )
+  }
   
   def getWorldPopulationGrowth( countryId: String ): List[ Information ] = {
     var populationGrowthByCountry = List.empty[ Information ]

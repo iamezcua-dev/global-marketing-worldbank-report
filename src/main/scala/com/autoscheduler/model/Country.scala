@@ -1,10 +1,14 @@
 package com.autoscheduler.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import javax.persistence.Embeddable
 
 import scala.beans.BeanProperty
 
-case class Country( @BeanProperty @JsonProperty( value = "id" ) id: String,
-                    @BeanProperty @JsonProperty( "value" ) value: String ) {
+@Embeddable
+case class Country( @BeanProperty @JsonProperty( value = "id" ) countryId: String,
+                    @BeanProperty @JsonProperty( "value" ) countryValue: String ) {
+  
   def this( ) = this( "", "" )
+  
 }
