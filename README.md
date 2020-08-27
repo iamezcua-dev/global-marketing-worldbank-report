@@ -49,7 +49,7 @@ To get the application compiled, follow the instructions below:
    
 1.  Execute this command to start the compilation
     ```bash
-    bin/sh compile.sh
+    sh bin/compile.sh
     ```
     
 1. Wait for the compilation to finish. On command completion, we should have a `jar` file inside the `target/` folder, which contains all what you need to run the project.
